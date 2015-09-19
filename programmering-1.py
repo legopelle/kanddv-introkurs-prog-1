@@ -5,7 +5,7 @@ def double(x):
     """Doubles numbers
 
     :x: Number to be doubled
-    :returns: Double x
+    :returns: Doubled x
 
     """
     return 2*x
@@ -22,11 +22,11 @@ def quadruple(x):
 
 
 def max2(x, y):
-    """Returns the largest of two objects
+    """Returns the largest of two numbers
 
-    :x: First object
-    :y: Second object
-    :returns: Largest object
+    :x: First number
+    :y: Second number
+    :returns: Largest number
 
     """
 
@@ -35,6 +35,8 @@ def max2(x, y):
 
     # Absolute half difference between the numbers
     halfdiff = 0.5*abs(x-y)
+
+    # Sum of mean and absolute half-difference is always the largest number
     return mean + halfdiff
 
 
@@ -48,6 +50,7 @@ def max3(x, y, z):
 
     """
 
+    # The largest number is either one of the two first numbers, or the last
     return max2(max2(x, y), z)
 
 
@@ -64,6 +67,7 @@ def magic_sum(x, y, z):
     largest = max3(x, y, z)
     first_term = quadruple(largest)
 
+    # Find the second largest number
     if largest == x:
         middle = max2(y, z)
     elif largest == y:
@@ -78,6 +82,7 @@ def magic_sum(x, y, z):
     return first_term + second_term
 
 
+# Test cases
 assert double(2) == 2*2
 
 assert max2(2, 3) == 3
