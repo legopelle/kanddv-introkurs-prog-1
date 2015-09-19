@@ -36,3 +36,16 @@ def max2(x, y):
     # Absolute half difference between the numbers
     halfdiff = 0.5*abs(x-y)
     return mean + halfdiff
+
+
+def max3(x, y, z):
+    """Returns the largest of three numbers
+
+    :x: First number
+    :y: Second number
+    :z: Third number
+    :returns: Largest number
+
+    """
+
+    return max2(max2(x, y), z)
