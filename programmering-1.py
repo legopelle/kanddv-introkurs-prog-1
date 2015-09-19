@@ -9,3 +9,13 @@ def double(x):
 
     """
     return 2*x
+
+
+def quadruple(x):
+    """Quadruples numbers
+
+    :x: Number to be quadrupled
+    :returns: Quadrupled x
+
+    """
+    return double(double(x))
