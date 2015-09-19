@@ -19,3 +19,14 @@ def quadruple(x):
 
     """
     return double(double(x))
+
+
+def max2(x, y):
+    """Returns the largest of two objects
+
+    :x: First object
+    :y: Second object
+    :returns: Largest object
+
+    """
+    return max(x, y)
