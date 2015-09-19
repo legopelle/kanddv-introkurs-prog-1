@@ -29,4 +29,10 @@ def max2(x, y):
     :returns: Largest object
 
     """
-    return max(x, y)
+
+    # Mean of the numbers
+    mean = 0.5*(x + y)
+
+    # Absolute half difference between the numbers
+    halfdiff = 0.5*abs(x-y)
+    return mean + halfdiff
