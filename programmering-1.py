@@ -49,3 +49,40 @@ def max3(x, y, z):
     """
 
     return max2(max2(x, y), z)
+
+
+def magic_sum(x, y, z):
+    """Returns the sum of the quadrupled largest and second largest numbers
+
+    :x: First number
+    :y: Second number
+    :z: Third number
+    :returns: The sum of the quadrupled largest and second largest numbers
+
+    """
+
+    largest = max3(x, y, z)
+    first_term = quadruple(largest)
+
+    if largest == x:
+        middle = max2(y, z)
+    elif largest == y:
+        middle = max2(x, z)
+    elif largest == z:
+        middle = max2(x, y)
+    else:
+        raise ValueError('Comparing largest number with input numbers failed')
+
+    second_term = quadruple(middle)
+
+    return first_term + second_term
+
+
+assert double(2) == 2*2
+
+assert max2(2, 3) == 3
+assert max2(0.0001, -0.0002) > 0
+assert max2(-1, -5) == -1
+
+assert magic_sum(1, 2, 3) == 2*4 + 3*4
+assert magic_sum(-5, -2, -1) == -4*1 + -4*2
